@@ -1,0 +1,31 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Deepfake Voice Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Deepfake Voice Detection</h1>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="audio" required>
+
+<button type="submit">Detect</button>
+
+</form>
+
+{% if prediction %}
+
+<h2>Prediction: {{ prediction }}</h2>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
